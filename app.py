@@ -4,7 +4,13 @@ from wtforms import StringField, EmailField, TextAreaField,TelField
 
 app = Flask(__name__) 
 
-
+class Contact:
+    def __init__(self, name, phone, email, text):
+        self.name = name
+        self.phone = phone
+        self.email = email
+        self.text=text
+        
 class ContactForm(FlaskForm):
     name = StringField('Name')
     email = EmailField('Email')
@@ -18,7 +24,9 @@ class ContactForm(FlaskForm):
 
 @app.route('/') 
 def index(): 
-    return render_template('index.html')
+    contact = Contact(name="Jan Nowak", email='email@email.pl', phone=111, text= 'text')
+    form = ContactForm()
+    return render_template('index.html', form=form)
 
 if __name__ == '__main__': 
     app.run()
