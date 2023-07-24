@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav{
+    height: 128px;
+    background: red;
+    width: 100%;
+}
+.logo,p,ul,li,.nav{
+    display: inline;
+}
+header{
+    background: url(/static/img/main.jpg) center / cover no-repeat;
+    height: calc(100vh - 128px);
+    display: flex;
+    justify-content: center;
+}
