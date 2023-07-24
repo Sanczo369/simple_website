@@ -38,7 +38,16 @@
   <section class="about"></section>
   <section class="portfolio"></section>
   <section class="team"></section>
-  <section class="contact"></section>
+  <section class="contact">
+    <form>
+      {{form.csrf_token}}
+      {{form.name.label}} {{form.name}} <br>
+      {{form.phone.label}} {{form.phone}} <br>
+      {{form.email.label}} {{form.email}} <br>
+      {{form.text.label}}: {{form.text}}<br>
+      <input type="submit" value="GO!">
+  </form>
+  </section>
   <footer>&copy; ProBud</footer>
 </div>
    <!-- Bootstrap -->
