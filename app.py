@@ -3,6 +3,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, EmailField, TextAreaField,TelField
 
 app = Flask(__name__) 
+# konfiguracja
+app.config.from_pyfile('config.cfg')
 
 class Contact:
     def __init__(self, name, phone, email, text):
