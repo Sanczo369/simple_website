@@ -39,14 +39,25 @@
   <section class="portfolio"></section>
   <section class="team"></section>
   <section class="contact">
-    <form>
+    <h1>Skontaktuj się ze mną</h1>
+    <form class="contactform">
       {{form.csrf_token}}
       {{form.name.label}} {{form.name}} <br>
       {{form.phone.label}} {{form.phone}} <br>
       {{form.email.label}} {{form.email}} <br>
-      {{form.text.label}}: {{form.text}}<br>
-      <input type="submit" value="GO!">
-  </form>
+      {{form.text.label}} {{form.text}}<br>
+      <input type="submit" value="Wyślij">
+    </form>
+    <div class="contactdetails">
+      <ul class="menu">
+        <li>Telefon</li>
+        <li>E-Mail</li>
+        <li>FaceBook</li>
+        <li>Address</li>
+      </ul>
+    </div>
+    </div>
+
   </section>
   <footer>&copy; ProBud</footer>
 </div>
