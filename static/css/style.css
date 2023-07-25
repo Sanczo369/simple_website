@@ -110,9 +110,56 @@ header main footer{
 blockquote { font-style: italic }
 blockquote cite { font-style: normal; }
 
+/* sekcja team */
+.team {
+  background-color: black;
+  padding: 10px 0 30px;
+}
+
+.team h1 {
+  font-size: 28px;
+  font-family: 'Saira Condensed',
+  sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+.team .about {
+  color: white;
+  font-family: 'Saira',
+  sans-serif;
+  font-weight: normal;
+  padding: 10px 20px 20px 0;
+  text-align: left;
+}
+
+.team .about h2 {
+  font-size: 18px;
+  border-bottom: 2px solid white;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  text-indent: 20px;
+}
+
+.team .about p {
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+.photo{
+  width: 400px;
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+.photo > img{
+  max-width: 100%;
+  transform: rotate(45deg);
+}
+
 
 /* sekcja contact */
-
 .contact {
   background-color: #000;
   padding: 30px 20px;
