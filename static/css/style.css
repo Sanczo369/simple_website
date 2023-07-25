@@ -117,13 +117,13 @@ blockquote cite { font-style: normal; }
 }
 
 .team h1 {
-  font-size: 28px;
+  font-size: 60px;
   font-family: 'Saira Condensed',
   sans-serif;
   text-transform: uppercase;
   color: white;
   text-align: center;
-  padding: 10px 20px;
+  padding: 30px 0px;
   margin-bottom: 15px;
 }
 .team .about {
@@ -135,17 +135,34 @@ blockquote cite { font-style: normal; }
   text-align: left;
 }
 
-.team .about h2 {
-  font-size: 18px;
+.team .about h3 {
+  font-size: 28px;
   border-bottom: 2px solid white;
-  margin-bottom: 12px;
+  margin-bottom: 50px;
   padding-bottom: 6px;
-  text-indent: 20px;
+  text-indent: 40px;
+  padding-top: 50px;
 }
 
 .team .about p {
-  font-size: 12px;
-  padding-left: 20px;
+  font-size: 18px;
+  padding-left: 40px;
+  line-height: 180%;
+}
+
+.team .employee {
+  max-width: 1400px;
+  margin: 0 auto 20px;
+  margin-bottom: 40px;
+  min-height: 646px;
+}
+
+.team .employee:nth-of-type(odd) {
+  background-color: #f9f104;
+}
+
+.team .employee:nth-of-type(even) {
+  background-color: #29a6dc;
 }
 
 .photo{
@@ -154,10 +171,39 @@ blockquote cite { font-style: normal; }
   overflow: hidden;
 }
 .photo > img{
+  margin-top: 10px;
+  margin-left: -3px;
+  display: block;
   max-width: 100%;
   transform: rotate(45deg);
 }
-
+.photo,
+.about {
+  width: 30%;
+  float: left;
+}
+.about {
+  width: 70%;
+  float: left;
+}
+.team .employee:nth-of-type(even) .photo {
+  float: right;
+  transform: rotate(45deg);
+}
+.team .employee:nth-of-type(even) .photo > img{
+  transform: rotate(-45deg);
+  float: right;
+}
+.team .employee:nth-of-type(even) .about {
+  padding-right: 0;
+}
+.team .employee:nth-of-type(even) .about p {
+  padding-right: 20px;
+}
+.team .employee:nth-of-type(even) .about h3 {
+  text-indent: 0;
+  margin-left: 40px;
+}
 
 /* sekcja contact */
 .contact {
