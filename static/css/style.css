@@ -12,6 +12,9 @@
   width: 1400px;
   margin: 0 auto;
 }
+html{
+  scroll-behavior: smooth;
+}
 /* Menu */
 nav {
  z-index: 1;
