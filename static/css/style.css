@@ -256,3 +256,21 @@ border-color: #000;
   color: white;
   vertical-align: top;  
 }
+/* footer */
+footer .slider{
+  width: 1400px;
+  margin: 20px auto;
+  display: grid;
+  grid-auto-flow: column;
+}
+footer .slider .logo{
+margin: 10px;
+}
+footer p{
+  text-align: right;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #000000;
+  padding-right: 20px;
+}
