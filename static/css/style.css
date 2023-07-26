@@ -115,7 +115,6 @@ blockquote cite { font-style: normal; }
   background-color: black;
   padding: 10px 0 30px;
 }
-
 .team h1 {
   font-size: 60px;
   font-family: 'Saira Condensed',
@@ -134,7 +133,6 @@ blockquote cite { font-style: normal; }
   padding: 10px 20px 20px 0;
   text-align: left;
 }
-
 .team .about h3 {
   font-size: 28px;
   border-bottom: 2px solid white;
@@ -143,28 +141,23 @@ blockquote cite { font-style: normal; }
   text-indent: 40px;
   padding-top: 50px;
 }
-
 .team .about p {
   font-size: 18px;
   padding-left: 40px;
   line-height: 180%;
 }
-
 .team .employee {
   max-width: 1400px;
   margin: 0 auto 20px;
   margin-bottom: 40px;
   min-height: 646px;
 }
-
 .team .employee:nth-of-type(odd) {
   background-color: #f9f104;
 }
-
 .team .employee:nth-of-type(even) {
   background-color: #29a6dc;
 }
-
 .photo{
   width: 400px;
   transform: rotate(-45deg);
