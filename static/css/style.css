@@ -200,9 +200,15 @@ blockquote cite { font-style: normal; }
 .team .employee:nth-of-type(even) .about p {
   padding-right: 20px;
 }
+.team .employee:nth-of-type(odd) .about {
+  color: black;
+}
 .team .employee:nth-of-type(even) .about h3 {
   text-indent: 0;
   margin-left: 40px;
+}
+.team .employee:nth-of-type(odd) .about h3 {
+border-color: #000;
 }
 
 /* sekcja contact */
