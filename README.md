@@ -1,5 +1,6 @@
-# simple_website
-Flask is a known as a micro web framework. This means it provides some basic functionality to allow developers to build simple websites.
+# Firma Budowlana
+Strona internetowa | Responsywna | Stworzona dla firmy budowlanej| Flask
+
 ## technology
 - Python
 - Flask
