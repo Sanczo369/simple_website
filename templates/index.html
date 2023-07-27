@@ -34,7 +34,7 @@
     </div>
   </nav>  
 <div class="wraper">
-  <header>
+  <header class="clearfix">
     <main>
       <img src="{{ url_for('static', filename='img/star.png')}}" alt="star">
       <img src="{{ url_for('static', filename='img/star.png')}}" alt="star">
@@ -46,7 +46,7 @@
       </blockquote>
     </main>
   </header>
-  <section id="about" class="about">
+  <section id="about" class="clearfix">
     <h1>Co robimy</h1>
     <div class="service">
       <img src="{{ url_for('static', filename='img/service1.png')}}" alt="#">
@@ -79,7 +79,7 @@
       <p class="description"></p>
     </div>
   </section>
-  <section id="portfolio" class="portfolio"></section>
+  <section id="portfolio" class="portfolio clearfix"></section>
   <section id="team" class="team">
     <h1>Nasz zespół</h1>
     <div class="employee clearfix">
@@ -112,7 +112,7 @@
       </div>
     </div>
   </section>
-  <section id="contact" class="contact">
+  <section id="contact" class="contact clearfix">
     <h1>Skontaktuj się z nami</h1>
     <form class="contactform">
       {{form.csrf_token}}

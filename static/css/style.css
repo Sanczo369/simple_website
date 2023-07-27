@@ -116,10 +116,49 @@ header main footer{
 blockquote { font-style: italic }
 blockquote cite { font-style: normal; }
 
+/* sekcja about */
+#about {
+  max-width: 1600px;
+  margin: 50px auto 0;
+  padding: 5%;
+  text-align: center;
+}
+
+#about h1 {
+  font-family: 'Saira Condensed',
+  sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+
+}
+
+#about .service h2 {
+  font-family: 'Saira Condensed',
+  sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+#about .service  p {
+  font-family: 'Saira',
+  sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+#about .service  img {
+  width: 100%;
+  margin: 5px 0;
+  max-width: 375px;
+}
+
 /* sekcja team */
 .team {
   background-color: black;
   padding: 10px 0 30px;
+  height: 100px;
 }
 .team h1 {
   font-size: 60px;
