@@ -119,6 +119,7 @@ header aside blockquote cite { font-style: normal; }
   text-align: center;
   font-family: 'Saira Condensed',
   sans-serif;
+  border-top: 4px solid black;
 }
 
 #about h1 {
@@ -136,26 +137,27 @@ header aside blockquote cite { font-style: normal; }
   width: 375px;
   height: 375px;
   box-shadow: 9px 9px 4px -4px black;
-  transition: all 1s linear;
+  transition: 1s linear;
+  background-position: center center;
 }
 #about .service:nth-of-type(1) {
-  background: url("../img/service1.jpg")0 / cover ;
+  background: url("../img/service1.jpg") no-repeat center;
 }
 
 #about .service:nth-of-type(2) {
-  background: url("../img/service2.jpg")0 / cover;
+  background: url("../img/service2.jpg") no-repeat center;
 }
 
 #about .service:nth-of-type(3) {
-  background: url("../img/service3.jpg")0 / cover;
+  background: url("../img/service3.jpg") no-repeat center;
 }
 
 #about .service:nth-of-type(4) {
-  background: url("../img/service4.jpg")0 / cover;
+  background: url("../img/service4.jpg") no-repeat center;
 }
 
 #about .service:nth-of-type(5) {
-  background: url("../img/service5.jpg")0 / cover;
+  background: url("../img/service5.jpg") no-repeat center;
 }
 
 #about .service:nth-of-type(6) {
@@ -185,7 +187,7 @@ header aside blockquote cite { font-style: normal; }
   opacity: 1;
 }
 #about .service:hover{
-background: hsla(0,0%,100%,.85) border-box;
+background: hsla(0,0%,100%,.85) no-repeat center;
 }
 /* sekcja team */
 .team {
@@ -271,16 +273,16 @@ background: hsla(0,0%,100%,.85) border-box;
 .team .employee:nth-of-type(even) .about p {
   padding-right: 20px;
 }
-.team .employee:nth-of-type(odd) .about {
+/* .team .employee:nth-of-type(odd) .about {
   color: black;
-}
+} */
 .team .employee:nth-of-type(even) .about h3 {
   text-indent: 0;
   margin-left: 40px;
 }
-.team .employee:nth-of-type(odd) .about h3 {
+/* .team .employee:nth-of-type(odd) .about h3 {
 border-color: #000;
-}
+} */
 
 /* sekcja contact */
 .contact {
