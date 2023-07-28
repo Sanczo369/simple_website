@@ -17,53 +17,51 @@ html{
 }
 /* Menu */
 nav {
- z-index: 1;
  height: 100px;
  position: fixed;
- padding: 20px;
- display: inline-block;
  width: 100%;
- padding-left: 50px;
+ padding-left: 80px;
  background-color: rgba(0, 0, 0, 0.6);
  color: #ffffff;
  font-family: 'Saira Condensed', sans-serif;
 }
-.hamburgerNav .menu {
- list-style: none;
- position: fixed;
- top: 0;
- right: 0;
- padding: 20px;
- padding-top: 100px;
- font-size: 20px;
- background-color: rgb(0, 0, 0);
+nav img {
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 12px;
 }
-.see {
- visibility: visible;
+
+nav h1 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.menu .hamburgerNav  {
+ list-style: none;
+ font-size: 20px;
+ 
 }
 .hamburgerNav {
   position: absolute;
-  top: 20px;
-  right: 0;
+  top:0;
+  right: 70px;
   text-align: right;
- width: 100vh;
- height: 15vw;
 }
 .hamburgerNav>li {
  display: inline-block;
- margin: 10px;
+ margin-right: 20px;
+
 }
 .hamburgerNav>li>a {
 text-decoration: none;
 color: white;
 font-size: 20px;
+line-height: 100px;
+padding: 10px;
 }
-nav img {
- height: 45px;
- position: absolute;
- top: 18px;
- left: 2px;
-}
+
 nav .menu i {
  position: absolute;
  top: 30px;
