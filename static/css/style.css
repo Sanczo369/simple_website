@@ -125,19 +125,21 @@ header aside blockquote cite { font-style: normal; }
   font-size: 60px;
   text-transform: uppercase;
   margin-bottom: 15px;
-  background: red;
   line-height: 150px;
 
 }
 #about .service{
+  border:2px solid #000;
+  margin: 40px;
+  padding: 20px;
   display: inline-block;
   width: 375px;
   height: 375px;
-  background-color: #f9f104;
-  background-size: 375px;
+  box-shadow: 9px 9px 4px -4px black;
+  transition: all 1s linear;
 }
 #about .service:nth-of-type(1) {
-  background: url("../img/service1.jpg")0 / cover;
+  background: url("../img/service1.jpg")0 / cover ;
 }
 
 #about .service:nth-of-type(2) {
@@ -161,20 +163,30 @@ header aside blockquote cite { font-style: normal; }
 }
 
 #about .service h2 {
-  background: yellowgreen;
-  font-size: 22px;
+  font-size: 25px;
   text-transform: uppercase;
+  opacity: 0;
+  transition: all 1s linear;
+  cursor: default;
 }
 
 #about .service  p {
-  background: green;
   font-family: 'Saira',
   sans-serif;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 300;
   margin: 20px 0;
+  opacity: 0;
+  transition: all 1s linear;
+  cursor: default;
 }
 
+#about .service:hover p,#about .service:hover h2 {
+  opacity: 1;
+}
+#about .service:hover{
+background: hsla(0,0%,100%,.85) border-box;
+}
 /* sekcja team */
 .team {
   background-color: black;
