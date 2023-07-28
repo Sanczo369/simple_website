@@ -134,29 +134,30 @@ header aside blockquote cite { font-style: normal; }
   width: 375px;
   height: 375px;
   background-color: #f9f104;
+  background-size: 375px;
 }
 #about .service:nth-of-type(1) {
-  background: url("../img/service1.jpg");
+  background: url("../img/service1.jpg")0 / cover;
 }
 
 #about .service:nth-of-type(2) {
-  background: url("../img/service2.jpg");
+  background: url("../img/service2.jpg")0 / cover;
 }
 
 #about .service:nth-of-type(3) {
-  background: url("../img/service3.jpg");
+  background: url("../img/service3.jpg")0 / cover;
 }
 
 #about .service:nth-of-type(4) {
-  background: url("../img/service4.jpg");
+  background: url("../img/service4.jpg")0 / cover;
 }
 
 #about .service:nth-of-type(5) {
-  background: url("../img/service5.jpg");
+  background: url("../img/service5.jpg")0 / cover;
 }
 
 #about .service:nth-of-type(6) {
-  background: url("../img/service6.jpg");
+  background: url("../img/service6.jpg")0 / cover;
 }
 
 #about .service h2 {
