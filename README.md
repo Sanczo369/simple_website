@@ -15,3 +15,7 @@ Strona internetowa | Responsywna | Stworzona dla firmy budowlanej| Flask
 - HTML
 - CSS
 - Bootstrap
+- JavaScript
+
+## JavaScript
+- Kod pobiera element o klasie .to-top i zmienia jego stan z widocznego na niewidoczny w zależnośći od odległości od góry strony (100px)
