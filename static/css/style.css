@@ -424,6 +424,12 @@ border-color: #000;
 #contact .contactdetails .menu li{
   margin: 20px;
 }
+
+#contact .contactdetails .menu li i{
+  margin: 20px;
+  font-size: 25px;
+  width: 20px;
+}
 /* footer */
 footer .slider{
   width: 1400px;
