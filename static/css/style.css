@@ -262,9 +262,8 @@ background: hsla(0,0%,100%,.85) no-repeat center;
 
 /* sekcja team */
 #team {
-  background-color: black;
+  background: #000;
   padding: 10px 0 30px;
-  height: 100px;
 }
 #team h1 {
   font-size: 60px;
@@ -274,7 +273,6 @@ background: hsla(0,0%,100%,.85) no-repeat center;
   color: white;
   text-align: center;
   padding: 30px 0px;
-  margin-bottom: 15px;
 }
 #team .about {
   color: white;
@@ -299,8 +297,6 @@ background: hsla(0,0%,100%,.85) no-repeat center;
 }
 #team .employee {
   max-width: 1400px;
-  margin: 0 auto 20px;
-  margin-bottom: 40px;
   min-height: 646px;
 }
 #team .employee:nth-of-type(odd) {
