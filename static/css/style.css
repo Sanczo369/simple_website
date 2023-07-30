@@ -344,16 +344,16 @@ background: hsla(0,0%,100%,.85) no-repeat center;
 #team .employee:nth-of-type(even) .about p {
   padding-right: 20px;
 }
-/* #team .employee:nth-of-type(odd) .about {
+#team .employee:nth-of-type(odd) .about {
   color: black;
-} */
+}
 #team .employee:nth-of-type(even) .about h3 {
   text-indent: 0;
   margin-left: 40px;
 }
-/* #team .employee:nth-of-type(odd) .about h3 {
+#team .employee:nth-of-type(odd) .about h3 {
 border-color: #000;
-} */
+}
 
 /* sekcja contact */
 #contact h1 { grid-area: header; }
@@ -372,8 +372,7 @@ border-color: #000;
 
 #contact .contactform{
   display: inline-block;
-  width: 50%;
-  padding: 0 40px;
+  padding: 0 100px;
 }
 #contact h1{
   font-family: 'Saira Condensed', sans-serif;
@@ -389,7 +388,7 @@ border-color: #000;
   font-family: 'Saira Condensed', sans-serif;
   display: inline-block;
   font-size: 20px;
-  width: 70px;
+  width: 100px;
   color: white;
   vertical-align: top;
 }
@@ -418,6 +417,13 @@ border-color: #000;
   color: white;
 }
 
+#contact .contactdetails .menu{
+  list-style: none;
+}
+
+#contact .contactdetails .menu li{
+  margin: 20px;
+}
 /* footer */
 footer .slider{
   width: 1400px;
