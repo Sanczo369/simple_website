@@ -193,7 +193,7 @@ background: hsla(0,0%,100%,.85) no-repeat center;
 /* sekcja Portfolio */
 #portfolio .project {
   height: 40vh;
-  width: 45%;
+  width: calc(50% - 2px);
   display: inline-block;
 }
 
@@ -232,7 +232,6 @@ background: hsla(0,0%,100%,.85) no-repeat center;
   font-family: 'saira', sans-serif;
   color: white;
   text-align: center;
-  /*  line-height: 25vh;*/
   text-shadow: 0 0 4px black;
   background-color: rgba(0, 0, 0, .5);
   padding: 0;
@@ -243,7 +242,7 @@ background: hsla(0,0%,100%,.85) no-repeat center;
   font-size: 40px;
 }
 
-#portfolio .project h1, #portfolio h1 {
+#portfolio h1 {
   font-family: 'saira condensed', sans-serif;
   padding: 20px;
   text-align: center;
