@@ -88,7 +88,7 @@
       <p class="description">fachowa i indywidualna pomoc w planowaniu projektów budowlanych. Nasi eksperci oferują wsparcie w doborze odpowiednich rozwiązań, budżetowaniu i analizie technicznej. Zapewniamy kompleksową wiedzę i doradztwo, aby pomóc klientom osiągnąć ich cele budowlane w sposób efektywny i zgodny z przepisami.</p>
     </div>
   </section>
-  <section id="portfolio" class="portfolio clearfix">
+  <section id="portfolio" class="portfolio">
     <section class="projects">
       <h1>Nasze Projekty</h1>
       <div class="project">
@@ -111,30 +111,30 @@
       </div>
     </section>
   </section>
-  <section id="team" class="team">
+  <section id="team">
     <h1>Nasz zespół</h1>
-    <div class="employee clearfix">
+    <div class="employee">
       <div class="photo"><img src="{{ url_for('static', filename='img/team1.jpg')}}" alt="team1"></div>
       <div class="about">
         <h3>Jan Nowak</h3>
         <p>Prezes firmy budowlanej ProBud z posiada 10 doświadczeniem na stanowisku, to wybitny lider i strategiczny myśliciel. Jego długoletnia praktyka pozwoliła mu zdobyć wiedzę o branży, umiejętność adaptacji do zmian rynkowych i skuteczne zarządzanie zespołem. Dzięki jego decyzyjności i zaangażowaniu firma odniosła sukcesy, osiągając stabilność finansową i rozszerzając zakres działalności. Jan Nowak jest wzorem uczciwości, dbając o dobro klientów, pracowników i środowiska. Jego charyzma i zdolności interpersonalne przyciągają lojalność współpracowników. Wizjonerskie podejście pozwala mu na innowacyjne projekty, które uczyniły firmę cenionym liderem w branży budowlanej.</p>
       </div>
     </div>
-    <div class="employee clearfix">
+    <div class="employee">
       <div class="photo"><img src="{{ url_for('static', filename='img/team2.jpg')}}" alt="team2"></div>
       <div class="about">
         <h3>Anna Kowalczyk</h3>
         <p>Architekt firmy budowlanej z dziesięcioletnim stażem na stanowisku to kreatywny i doświadczony specjalista. Jego wszechstronne umiejętności projektowania oraz głęboka wiedza branżowa przyczyniły się do realizacji różnorodnych i innowacyjnych projektów budowlanych. Dzięki jego zaangażowaniu, firma zdobyła uznanie wśród klientów i partnerów biznesowych. Architekt aktywnie współpracuje z zespołem projektowym i zarządzającym, dbając o harmonię między estetyką a funkcjonalnością w realizowanych projektach. Jego zdolność rozwiązywania problemów oraz dostosowywania się do zmieniających się trendów w branży sprawia, że firma utrzymuje się na pozycji lidera, a klienci czerpią zadowolenie z jego innowacyjnych rozwiązań architektonicznych.</p>
       </div>
     </div>
-    <div class="employee clearfix">
+    <div class="employee">
       <div class="photo"><img src="{{ url_for('static', filename='img/team3.jpg')}}" alt="team3"></div>
       <div class="about">
         <h3>Piotr Woźniak</h3>
         <p>Kierownik budowy w firmie budowlanej, z imponującym dziesięcioletnim doświadczeniem na stanowisku, to osoba pełna zaangażowania i profesjonalizmu. Jego umiejętność koordynacji, nadzoru i organizacji procesów budowlanych przyczyniła się do pomyślnego wykonania różnorodnych projektów. Dzięki doskonałym zdolnościom komunikacyjnym, efektywnie współpracuje z zespołem, klientami i podwykonawcami. Jego determinacja w rozwiązywaniu problemów i elastyczność w adaptacji do zmieniających się warunków na placu budowy gwarantują terminowe i wysokiej jakości wykonanie prac. Jako autorytet dla pracowników, inspiruje ich do osiągania najwyższych standardów bezpieczeństwa i wydajności, co przekłada się na sukcesy i renomę firmy w branży budowlanej.</p>
       </div>
     </div>
-    <div class="employee clearfix">
+    <div class="employee">
       <div class="photo"><img src="{{ url_for('static', filename='img/team4.jpg')}}" alt="team4"></div>
       <div class="about">
         <h3>Michał Wójcik</h3>
@@ -143,7 +143,7 @@
       </div>
     </div>
   </section>
-  <section id="contact" class="contact clearfix">
+  <section id="contact">
     <h1>Skontaktuj się z nami</h1>
     <form class="contactform">
       {{form.csrf_token}}
@@ -161,9 +161,8 @@
         <li><i class="fa-solid fa-location-pin"></i>Address</li>
       </ul>
     </div>
-    </div>
-
   </section>
+</div>
   <footer>
     <div class="slider">
       <div class="logo"><img src="{{ url_for('static', filename='img/firm1.png')}}" alt="logo"></div>
