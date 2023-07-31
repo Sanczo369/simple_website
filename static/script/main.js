@@ -1,13 +1,25 @@
-const toTop = document.querySelector('.navbar');
-const navBar = document.querySelector('.to-top');
+const navBar = document.querySelector('.navbar');
+const toTop = document.querySelector('.to-top');
 
 window.addEventListener('scroll', () =>{
     if (window.scrollY>100){
         toTop.classList.add("active");
-        toTop.classList.add("activeNav");
+        navBar.classList.add("activeNav");
     }
     else{
         toTop.classList.remove("active");
-        toTop.classList.remove("activeNav");
+        navBar.classList.remove("activeNav");
     }
 })
+
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false
+menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
+    }else {
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+    }
+});

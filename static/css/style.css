@@ -48,23 +48,20 @@ nav h1 {
   margin-bottom: 7px;
 }
 
-.menu .hamburgerNav  {
+.menu ul  {
  list-style: none;
  font-size: 20px;
- 
-}
-.hamburgerNav {
   position: absolute;
   top:0;
   right: 70px;
   text-align: right;
 }
-.hamburgerNav>li {
+.menu ul>li {
  display: inline-block;
  margin-right: 20px;
 
 }
-.hamburgerNav>li>a {
+.menu ul>li>a {
 text-decoration: none;
 color: white;
 font-size: 20px;
@@ -72,21 +69,47 @@ line-height: 100px;
 padding: 10px;
 }
 
-nav .menu .hamburger {
- position: absolute;
- top: 35px;
- right: 30px;
+.menu-btn {
+  position: absolute;
+  top:50px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
 }
-nav .menu .hamburger .bar{
-  display: block;
-  transition: all 0.3s ease-in-out;
-  background-color: #fff;
-  height: 3px;
+.bar {
   width: 25px;
-  margin: 5px auto;
+  height: 3px;
+  background: #fff;
+  transition: all .5s ease-in-out;
 }
-
-
+.bar::before,
+.bar::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: all .5s ease-in-out;
+}
+.bar::before {
+  transform: translateY(-10px);
+}
+.bar::after {
+  transform: translateY(10px);
+}
+/* ANIMATION */
+.menu-btn.open .bar {
+  width: 0;
+  height: 0;
+}
+.menu-btn.open .bar::before {
+  transform: rotate(45deg);
+}
+.menu-btn.open .bar::after {
+  transform: rotate(-45deg);
+}
    /* Header  */
 header{
   position: relative;
@@ -455,9 +478,12 @@ footer p{
   padding-right: 20px;
 }
 .to-top{
-  background: #ffffff;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 50%;
+  color: #000;
   position: fixed;
-  bottom: 32px;
+  bottom: 40px;
   right: 32px;
   width: 50px;
   height: 50px;
