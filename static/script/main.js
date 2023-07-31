@@ -13,13 +13,16 @@ window.addEventListener('scroll', () =>{
 })
 
 const menuBtn = document.querySelector('.menu-btn');
+const ulList = document.querySelector('.hamburgerNav');
 let menuOpen = false
 menuBtn.addEventListener('click', () => {
     if(!menuOpen) {
         menuBtn.classList.add('open');
+        ulList.classList.add('see');
         menuOpen = true;
     }else {
         menuBtn.classList.remove('open');
+        ulList.classList.remove('see');
         menuOpen = false;
     }
 });
