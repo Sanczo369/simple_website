@@ -18,4 +18,6 @@ Strona internetowa | Responsywna | Stworzona dla firmy budowlanej| Flask
 - JavaScript
 
 ## JavaScript
-- Kod pobiera element o klasie .to-top i zmienia jego stan z widocznego na niewidoczny w zależnośći od odległości od góry strony (100px)
+- Kod pobiera element o klasie .to-top i zmienia jego stan z widocznego na niewidoczny w zależności od odległości od góry strony (100px)
+- Kod pobiera element o klasie .navbar i zmienia jego stan przezroczystości w zależności od odległości od góry strony (100px)
+- Kod pobiera element o klasie .menu-btn animuje go po kliknięciu oraz zmienia pozyjce hamburgerNav (wyświetlenie listy menu lub jej schowanie)
