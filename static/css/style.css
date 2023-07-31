@@ -307,10 +307,10 @@ background: hsla(0,0%,100%,.85) no-repeat center;
   min-height: 646px;
 }
 #team .employee:nth-of-type(odd) {
-  background-color: #f9f104;
+  background-color: #ffffff;
 }
 #team .employee:nth-of-type(even) {
-  background-color: #29a6dc;
+  background-color: #000000;
 }
 #team .photo{
   width: 400px;
@@ -379,12 +379,12 @@ border-color: #000;
 }
 #contact h1{
   font-family: 'Saira Condensed', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   text-transform: uppercase;
   color: white;
   width: 100%;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   margin-top: 30px;
 }
 #contact label{
@@ -412,6 +412,9 @@ border-color: #000;
 #contact textarea {
   height: 120px
 }
+#contact .contactform .submit{
+  margin-left: 105px;
+}
 
 #contact .contactdetails{
   display: inline-block;
@@ -425,7 +428,7 @@ border-color: #000;
 }
 
 #contact .contactdetails .menu li{
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 #contact .contactdetails .menu li i{
