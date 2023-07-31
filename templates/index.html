@@ -143,7 +143,7 @@
   </section>
   <section id="contact">
     <h1>Skontaktuj się z nami</h1>
-    <form class="contactform">
+    <form class="contactform" method="post" action="/">
       {{form.csrf_token}}
       {{form.name.label}} {{form.name}} <br>
       {{form.phone.label}} {{form.phone}} <br>
@@ -151,6 +151,7 @@
       {{form.text.label}} {{form.text}}<br>
       <input class="submit" type="submit" value="Wyślij">
     </form>
+    {{ js_script|safe }}
     <div class="contactdetails">
       <ul class="menu">
         <li><i class="fas fa-phone-alt"></i>Telefon: 00000000</li>
