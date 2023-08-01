@@ -488,6 +488,13 @@ footer p{
   background-color: #000000;
   padding-right: 20px;
 }
+footer p i{
+
+  font-size: 20px;
+  color: #ffffff;
+  padding-right: 5px;
+}
+
 .to-top{
   background: #fff;
   border: 2px solid black;
