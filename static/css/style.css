@@ -230,6 +230,51 @@ header aside blockquote cite { font-style: normal; }
   font-size: 20px;
   font-weight: 300;
 }
+/* sekcja numbers*/
+.numbers{
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+}
+.number{
+  width: 28vmin;
+  height: 28vmin;
+  border-bottom: 4px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #fff;
+  color: #000;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  margin: 0 auto;
+}
+.number i{
+font-size: 5em;
+text-align: center;
+}
+span.num{
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 4em;
+}
+span.text{
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 3em;
+  font-size: 1.5em;
+  text-align: center;
+  pad:0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+  font-family: serif;
+  font-family: 'Saira Condensed',
+  sans-serif;
+}
+
 
 /* sekcja Portfolio */
 #portfolio .project {
