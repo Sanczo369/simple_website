@@ -168,62 +168,67 @@ header aside blockquote cite { font-style: normal; }
 #about .service{
   border:2px solid #000;
   margin: 40px;
-  padding: 20px;
   display: inline-block;
   width: 375px;
   height: 375px;
-  box-shadow: 9px 9px 4px -4px black;
-  transition: 1s linear;
-  background-position: center center;
+  transition: 0.5s linear;
+  transform-style: preserve-3d;
 }
-#about .service:nth-of-type(1) {
-  background: url("../img/service1.jpg") no-repeat center;
-}
-
-#about .service:nth-of-type(2) {
-  background: url("../img/service2.jpg") no-repeat center;
+#about .service:hover {
+  transform: rotateY(180deg);
 }
 
-#about .service:nth-of-type(3) {
-  background: url("../img/service3.jpg") no-repeat center;
-}
+#about .service .front{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  background-size: 70%;
+  backface-visibility: hidden;
+  }
+  #about .service h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
 
-#about .service:nth-of-type(4) {
-  background: url("../img/service4.jpg") no-repeat center;
-}
+  #about .service .img1{
+    background-image: url("../img/service1.jpg");
+  }
+  #about .service .img2{
+    background-image: url("../img/service2.jpg");
+  }
+  #about .service .img3{
+    background-image: url("../img/service3.jpg");
+  }
+  #about .service .img4{
+    background-image: url("../img/service4.jpg");
+  }
+  #about .service .img5{
+    background-image: url("../img/service5.jpg");
+  }
+  #about .service .img6{
+    background-image: url("../img/service6.jpg");
+  }
 
-#about .service:nth-of-type(5) {
-  background: url("../img/service5.jpg") no-repeat center;
-}
 
-#about .service:nth-of-type(6) {
-  background: url("../img/service6.jpg")0 / cover;
-}
-
-#about .service h2 {
-  font-size: 25px;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: all 1s linear;
-  cursor: default;
-}
-
-#about .service  p {
+#about .service .back{
   font-family: 'Saira',
   sans-serif;
+  text-align: center;
+  transform:rotateY(180deg);
+  backface-visibility: hidden;
+  padding: 15% 10%;
+  }
+
+#about .service  p {
   font-size: 20px;
   font-weight: 300;
-  margin: 20px 0;
-  opacity: 0;
-  transition: all 1s linear;
-  cursor: default;
-}
-
-#about .service:hover p,#about .service:hover h2 {
-  opacity: 1;
-}
-#about .service:hover{
-background: hsla(0,0%,100%,.85) no-repeat center;
 }
 
 /* sekcja Portfolio */
