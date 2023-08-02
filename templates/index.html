@@ -191,16 +191,30 @@
       </div>
     </div>
   </section>
-  <section class="opinions">
-    <div id="slide-1"></div>
-    <div id="slide-2"></div>
-    <div id="slide-3"></div>
-    <div id="slide-4"></div>
-    <div class="slider-nav">
-      <a href="#slide-1"></a>
-      <a href="#slide-2"></a>
-      <a href="#slide-3"></a>
-      <a href="#slide-4"></a>
+  <section class="slider">
+    <div class="slides">
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+
+      <div class="slide first"><img src="{{ url_for('static', filename='img/service4.jpg')}}" alt="logo"></div>
+      <div class="slide"><img src="{{ url_for('static', filename='img/service4.jpg')}}" alt="logo"></div>
+      <div class="slide"><img src="{{ url_for('static', filename='img/service4.jpg')}}" alt="logo"></div>
+      <div class="slide"><img src="{{ url_for('static', filename='img/service4.jpg')}}" alt="logo"></div>
+
+      <div class="nav-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+    </div>
+    <div class="nav-manual">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
     </div>
   </section>
   <section id="contact">
