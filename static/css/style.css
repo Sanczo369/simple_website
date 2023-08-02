@@ -466,7 +466,7 @@ span.text{
 border-color: #000;
 }
 
-/*  sekcja slider */
+/*  sekcja opinions */
 .opinions{
   margin: 50px auto;
   position: relative;
@@ -524,7 +524,34 @@ justify-content: center;
 #radio4:checked ~ .first{
   margin-left: -60%;
 }
-
+.nav-auto{
+  position: absolute;
+  display: flex;
+  width: 1400px;
+  justify-content: center;
+  margin-top: 460px;
+}
+.nav-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.nav-auto div:not(:last-child){
+  margin-right: 40px;
+}
+#radio1:checked ~ .nav-auto .auto-btn1{
+  background: #40D3DC;;
+}
+#radio2:checked ~ .nav-auto .auto-btn2{
+  background: #40D3DC;;
+}
+#radio3:checked ~ .nav-auto .auto-btn3{
+  background: #40D3DC;;
+}
+#radio4:checked ~ .nav-auto .auto-btn4{
+  background: #40D3DC;;
+}
 /* sekcja contact */
 #contact h1 { grid-area: header; }
 #contact .contactform { grid-area: left; }
