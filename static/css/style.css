@@ -178,23 +178,27 @@ header aside blockquote cite { font-style: normal; }
   transform: rotateY(180deg);
 }
 
+#about .service:hover {
+  transform: rotateY(180deg);
+}
+
 #about .service .front{
   position: absolute;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
-  background-position: center 20%;
-  background-size: 70%;
+  background-position: center;
+  background-size: cover;
   backface-visibility: hidden;
   }
-  #about .service h2 {
+#about .service h2 {
     font-size: 30px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
+    bottom: 0;
   }
 
   #about .service .img1{
@@ -223,12 +227,20 @@ header aside blockquote cite { font-style: normal; }
   text-align: center;
   transform:rotateY(180deg);
   backface-visibility: hidden;
-  padding: 15% 10%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: hidden;
   }
 
 #about .service  p {
-  font-size: 20px;
-  font-weight: 300;
+  padding: 30px;
+  width: 375px;
+  height: 375px;
+  background-color: rgba(0, 63, 114, 0.5);
+  font-size: 23px;
+  font-weight: 600;
+  color: #fff;
 }
 /* sekcja numbers*/
 .numbers{
