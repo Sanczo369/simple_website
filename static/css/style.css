@@ -289,13 +289,24 @@ span.text{
 
 
 /* sekcja Portfolio */
-#portfolio .project {
-  height: 40vh;
-  width: calc(50% - 2px);
-  display: inline-block;
+#portfolio .projects{
+  background: #000;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  't1 t1'
+  'l1 r1'
+  'l2 r2'
+  'l3 r3';
+}
+#portfolio .projects h1{
+  grid-area: t1;
 }
 
 #portfolio .project {
+  height: 40vh;
+  display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -304,26 +315,32 @@ span.text{
 
 #portfolio .project:nth-of-type(1) {
   background-image: url("../img/portfolio1.jpg");
+  grid-area: l1;
 }
 
 #portfolio .project:nth-of-type(2) {
   background-image: url("../img/portfolio2.jpg");
+  grid-area: r1;
 }
 
 #portfolio .project:nth-of-type(3) {
   background-image: url("../img/portfolio3.jpg");
+  grid-area: l2;
 }
 
 #portfolio .project:nth-of-type(4) {
   background-image: url("../img/portfolio4.jpg");
+  grid-area: r2;
 }
 
 #portfolio .project:nth-of-type(5) {
   background-image: url("../img/portfolio5.jpg");
+  grid-area: l3;
 }
 
 #portfolio .project:nth-of-type(6) {
   background-image: url("../img/portfolio6.jpg");
+  grid-area: r3;
 }
 
 #portfolio .project p {
