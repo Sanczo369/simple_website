@@ -19,9 +19,21 @@ class ContactForm(FlaskForm):
 def index(): 
     form = ContactForm()
     if request.method == 'POST' and form.validate_on_submit():
-        return render_template('success.html', )  # Przekierowanie na nowy widok dla sukcesu
-    else:    
-        return render_template('index.html', form=form)
+        name = form.name.data
+        email = form.email.data
+        phone = form.phone.data
+        text = form.text.data
+        
+        # Tworzenie wiadomości email
+        subject = "Wiadomość od {} ({})".format(name, email)
+        body = "Wiadomość: {}\nTelefon: {}".format(text, phone)
+        message = Message(subject=subject, body=body, recipients=["test.test.test@vp.pl"])
+        
+        # Wysyłanie wiadomości
+        mail.send(message)
+        return redirect('/')
+    
+    return render_template('index.html', form=form)
 
 
 if __name__ == '__main__': 
