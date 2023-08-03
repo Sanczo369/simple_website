@@ -8,13 +8,7 @@ app = Flask(__name__)
 # konfiguracja
 app.config.from_pyfile('config.cfg')
 mail = Mail(app)
-class Contact:
-    def __init__(self, name, phone, email, text):
-        self.name = name
-        self.phone = phone
-        self.email = email
-        self.text=text
-        
+
 class ContactForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired()])
@@ -23,7 +17,6 @@ class ContactForm(FlaskForm):
     
 @app.route('/', methods=['GET', 'POST'])
 def index(): 
-    contact = Contact(name="Jan Nowak", email='email@email.pl', phone=111, text= 'text')
     form = ContactForm()
     if request.method == 'POST' and form.validate_on_submit():
         return render_template('success.html', )  # Przekierowanie na nowy widok dla sukcesu
