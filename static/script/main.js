@@ -45,11 +45,19 @@ valueDisplays.forEach((valueDisplay) => {
 });
 
 let counter = 1;
+let sliderFlage = false
 setInterval(function(){
     document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if(counter > 4){
-        counter = 1;
+    if(!sliderFlage){
+        counter++;
+        if(counter>=4){
+            sliderFlage = true;
+        }
+    }else {
+        counter--;
+        if(counter<=1){
+            sliderFlage = false;
+        }
     }
 }, 5000);
 
