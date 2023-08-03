@@ -52,3 +52,26 @@ setInterval(function(){
         counter = 1;
     }
 }, 5000);
+
+function subscribeToNewsletter() {
+    var email = document.getElementById('email').value;
+    // Tutaj możesz wykonać zapytanie do backendu (Flask) w celu obsługi subskrypcji
+    alert('Dziękujemy za dołączenie do naszego newslettera!');
+    closeNewsletterPopup();
+}
+
+function closeNewsletterPopup() {
+    var newsletterPopup = document.getElementById('newsletterPopup');
+    newsletterPopup.style.display = 'none';
+}
+
+// Wyświetlenie alert boxa po załadowaniu strony
+window.onload = function() {
+    var newsletterPopup = document.getElementById('newsletterPopup');
+    newsletterPopup.style.display = 'block';
+};
+
+const xBtn = document.querySelector('.x');
+xBtn.addEventListener('click', () => {
+    newsletterPopup.style.display = 'none';
+});
