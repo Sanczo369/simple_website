@@ -3,11 +3,17 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, EmailField, TextAreaField,TelField
 from flask_mail import Mail, Message
 from wtforms.validators import DataRequired
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__) 
 # konfiguracja
 app.config.from_pyfile('config.cfg')
 mail = Mail(app)
+db = SQLAlchemy(app)
+
+class Newsletter(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100)) 
 
 class ContactForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
@@ -16,7 +22,8 @@ class ContactForm(FlaskForm):
     text = TextAreaField('Text', validators=[DataRequired()])
     
 @app.route('/', methods=['GET', 'POST'])
-def index(): 
+def index():
+    db.create_all() 
     form = ContactForm()
     if request.method == 'POST' and form.validate_on_submit():
         name = form.name.data
