@@ -63,5 +63,9 @@ def index():
     return render_template('index.html', form=form , newsform=newsform)
 
 
+@app.route('/newsletter', methods=['GET', 'POST'])
+def newsletter():
+    return render_template('newsletter.html')
+
 if __name__ == '__main__': 
     app.run()
