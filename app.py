@@ -28,11 +28,19 @@ class ContactForm(FlaskForm):
 def index():
     db.create_all() 
     form = ContactForm()
+    newsform = NewsletterForm()
+    if request.method == 'POST' and newsform.validate_on_submit():
+        email = newsform.email.data
+        new_email = Newsletter(email=email)
+        db.session.add(new_email)
+        db.session.commit()
+        
     if request.method == 'POST' and form.validate_on_submit():
         name = form.name.data
         email = form.email.data
         phone = form.phone.data
         text = form.text.data
+    
         
         # Tworzenie wiadomości email
         subject = "Wiadomość od {} ({})".format(name, email)
