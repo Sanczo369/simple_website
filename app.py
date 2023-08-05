@@ -15,6 +15,9 @@ class Newsletter(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100)) 
 
+class NewsletterForm(FlaskForm):
+    email = EmailField('Email', validators=[DataRequired()])
+    
 class ContactForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = EmailField('Email', validators=[DataRequired()])
