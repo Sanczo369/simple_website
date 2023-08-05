@@ -26,7 +26,8 @@
     <button class="x">x</button>
     <h2>Dołącz do naszego newslettera!</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, saepe aut sed ea illum numquam mollitia quasi iure sit nulla porro adipisci consectetur quis? Blanditiis natus fuga ad ipsum laboriosam.</p>
-    <input type="email" id="email" placeholder="Twój email" required>
+    <form method="POST" action="/">
+      {{ newsform.email(size=30) }}
     <button>Zapisz się</button>
   </div>
   <nav class="navbar">

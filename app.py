@@ -16,7 +16,7 @@ class Newsletter(db.Model):
     email = db.Column(db.String(100)) 
 
 class NewsletterForm(FlaskForm):
-    email = EmailField('Email', validators=[DataRequired()])
+    email = EmailField('Email', validators=[DataRequired()],render_kw={"placeholder": "Twój email", "id":"email"})
     
 class ContactForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
@@ -51,7 +51,7 @@ def index():
         mail.send(message)
         return redirect('/')
     
-    return render_template('index.html', form=form)
+    return render_template('index.html', form=form , newsform=newsform)
 
 
 if __name__ == '__main__': 
