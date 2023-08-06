@@ -28,6 +28,17 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        $('.delete-confirm').click(function (){
+            var desc = $(this).attr('data-desc');
+            var url = $(this).attr('data-url');
+            $('#idDeleteModalBody').text(desc);
+            $('#confirmDeleteForm').attr('action', url);
+        });
+    });
+    </script>   
 
     <h1>Newsletter</h1>
     <div class='container'>
