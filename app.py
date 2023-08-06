@@ -68,5 +68,12 @@ def newsletter():
     email_addresses = Newsletter.query.all()
     return render_template('newsletter.html', email_addresses=email_addresses)
 
+@app.route('/remove_email/<int:email_addresses_id>')
+def remove_email(email_addresses_id):
+    del_email= Newsletter.query.filter(Newsletter.id==email_addresses_id).first()
+    db.session.delete(del_email)
+    db.session.commit()
+    return redirect(url_for('newsletter'))
+
 if __name__ == '__main__': 
     app.run()
