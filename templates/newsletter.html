@@ -25,7 +25,11 @@
                     <th >{{ email.email}}</th>
                     <td>
                         <a href="#" class='btn btn-primary btn-sm' role="button">Actions...</a>
-                        <a type="button" class="btn btn-danger btn-sm delete-confirm">Delete</a>
+                        <a type="button" class="btn btn-danger btn-sm delete-confirm" data-bs-toggle="modal" 
+                        data-bs-target="#confirmDeleteModal" 
+                        data-desc="{{ 'Delete transaction for {} {}?'.format(email.id, 
+                                                                               email.email)}}"
+                     data-url="{{ url_for('remove_email', email_addresses_id=email.id)}}">Delete</a>
                     </td>
                 </tr>
             {% endfor %}
