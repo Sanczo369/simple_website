@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Newsletter</title>
-    <title>Newsletter</title>
 </head>
 <body>
     <!-- Modal -->
@@ -13,7 +12,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">This enter will be deleted:</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ten adres zostanie usnięty:</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="idDeleteModalBody">
@@ -21,8 +20,8 @@
                 </div>
                 <div class="modal-footer">
                     <form action="" method="GET" id="confirmDeleteForm">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+                        <button type="submit" class="btn btn-danger">Usuń</button>
                     </form>
                 </div>
             </div>
@@ -47,7 +46,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Operations</th>
+                    <th scope="col">Operacje</th>
                 </tr>
             </thead>
             <tbody>
@@ -56,12 +55,11 @@
                     <th scope="row">{{ email.id}}</th>
                     <th >{{ email.email}}</th>
                     <td>
-                        <a href="#" class='btn btn-primary btn-sm' role="button">Actions...</a>
+                        <a href="#" class='btn btn-primary btn-sm' role="button">Edytuj</a>
                         <a type="button" class="btn btn-danger btn-sm delete-confirm" data-bs-toggle="modal" 
                         data-bs-target="#confirmDeleteModal" 
-                        data-desc="{{ 'Delete transaction for {} {}?'.format(email.id, 
-                                                                               email.email)}}"
-                     data-url="{{ url_for('remove_email', email_addresses_id=email.id)}}">Delete</a>
+                        data-desc="{{ 'Usunąć adres: {}?'.format(email.email)}}"
+                     data-url="{{ url_for('remove_email', email_addresses_id=email.id)}}">Usuń</a>
                     </td>
                 </tr>
             {% endfor %}
