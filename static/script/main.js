@@ -78,8 +78,3 @@ window.onload = function() {
     var newsletterPopup = document.getElementById('newsletterPopup');
     newsletterPopup.style.display = 'block';
 };
-
-const xBtn = document.querySelector('.x');
-xBtn.addEventListener('click', () => {
-    newsletterPopup.style.display = 'none';
-});
