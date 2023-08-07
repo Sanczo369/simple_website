@@ -42,15 +42,11 @@ def index():
             
             # Tworzenie nowego rekordu w bazie Newsletter
             email = newsform.email.data
-            logging.info(f"Formularz wysłany przez: ({email})")
             new_email = Newsletter(email=email)
-            logging.error(f"Utworzenie nowego rekordu: ({email})")
             db.session.add(new_email)
-            logging.error(f"Dodanie nowego rekordu: ({email})")
             db.session.commit()
-            logging.error(f"zapisanie nowego rekordu: ({email})")
             
-        if form.validate_on_submit():
+        elif form.validate_on_submit():
             name = form.name.data
             email = form.email.data
             phone = form.phone.data
