@@ -29,7 +29,9 @@
     <form method="POST" action="/">
       {{ newsform.email(size=30) }}
     <button>Zapisz się</button>
+    </form>
   </div>
+  <!-- Navbar -->
   <nav class="navbar">
     <img src="{{ url_for('static', filename='img/logo.png')}}" alt="logo">
     <h1>ProBud</h1>
@@ -55,6 +57,7 @@
     </div>
   </nav>  
 <div class="wraper">
+  <!-- Header -->
   <header>
     <aside>
       <blockquote>“Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis iusto consequatur sit at natus impedit cum debitis”</em>
@@ -62,6 +65,7 @@
       </blockquote>
     </aside>
   </header>
+  <!-- About -->
   <section id="about">
     <h1>Co robimy</h1>
     <div class="service">
@@ -119,6 +123,7 @@
       </div>
     </div>
   </section>
+  <!-- Portfolio -->
   <section id="portfolio" class="portfolio">
     <section class="projects">
       <h1>Nasze Projekty</h1>
@@ -142,6 +147,7 @@
       </div>
     </section>
   </section>
+  <!-- Numbers -->
   <section class="numbers">
     <div class="number">
       <i class="fa-regular fa-building"></i>
@@ -164,6 +170,7 @@
       <span class="text">Zadowolonych Klientów</span>
     </div>
   </section>
+  <!-- Team -->
   <section id="team">
     <h1>Nasz zespół</h1>
     <div class="employee">
@@ -195,6 +202,7 @@
       </div>
     </div>
   </section>
+  <!-- Opinions -->
   <section class="opinions">
     <div class="slides">
       <input type="radio" name="radio-btn" id="radio1">
@@ -217,6 +225,7 @@
           </blockquote>
         </div>
       </div>
+      <!-- slide -->
       <div class="slide">
         <div class="opinion">
           <div class="face">
@@ -277,6 +286,7 @@
       <label for="radio4" class="manual-btn"></label>
     </div>
   </section>
+  <!-- Contact -->
   <section id="contact">
     <h1>Skontaktuj się z nami</h1>
     <form class="contactform" method="post" action="/">
@@ -297,6 +307,7 @@
     </div>
   </section>
 </div>
+<!-- Footer -->
   <footer>
     <div class="logo-slider">
       <div class="logo"><img src="{{ url_for('static', filename='img/firm1.png')}}" alt="logo"></div>
@@ -305,7 +316,6 @@
       <div class="logo"><img src="{{ url_for('static', filename='img/firm4.png')}}" alt="logo"></div>
       <div class="logo"><img src="{{ url_for('static', filename='img/firm5.png')}}" alt="logo"></div>
       <div class="logo"><img src="{{ url_for('static', filename='img/firm6.png')}}" alt="logo"></div>
-
     </div>
     <p>
       <i class="fab fa-twitter-square"></i>
@@ -315,10 +325,11 @@
       &copy; ProBud</p>
   </footer>
 </div>
+<!-- Move icon -->
 <a href="#" class="to-top">
   <i class="fas fa-chevron-up"></i>
-
 </a>
+<!-- Script -->
    <script src="{{ url_for('static', filename='script/main.js') }}"></script>
    <!-- Bootstrap -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
