@@ -4,18 +4,21 @@ from wtforms import StringField, EmailField, TextAreaField,TelField
 from flask_mail import Mail, Message
 from wtforms.validators import DataRequired
 from flask_sqlalchemy import SQLAlchemy
-
 import logging
 
 
 app = Flask(__name__) 
 # konfiguracja
 app.config.from_pyfile('config.cfg')
-mail = Mail(app)
+
+# inicjalizacji rozszerzenia
+mail = Mail(app) 
 db = SQLAlchemy(app)
 
+# konfiguracja logging
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# klasy
 class Newsletter(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100)) 
@@ -36,6 +39,8 @@ def index():
     newsform = NewsletterForm()
     if request.method == 'POST':
         if newsform.validate_on_submit():
+            
+            # Tworzenie nowego rekordu w bazie Newsletter
             email = newsform.email.data
             logging.info(f"Formularz wysłany przez: ({email})")
             new_email = Newsletter(email=email)
@@ -51,7 +56,6 @@ def index():
             phone = form.phone.data
             text = form.text.data
         
-            
             # Tworzenie wiadomości email
             subject = "Wiadomość od {} ({})".format(name, email)
             body = "Wiadomość: {}\nTelefon: {}".format(text, phone)
@@ -63,12 +67,13 @@ def index():
     
     return render_template('index.html', form=form , newsform=newsform)
 
-
+# wyświetlanie rekordów newslettera
 @app.route('/newsletter')
 def newsletter():
     email_addresses = Newsletter.query.all()
     return render_template('newsletter.html', email_addresses=email_addresses)
 
+# usuwanie rekordu
 @app.route('/remove_email/<int:email_addresses_id>')
 def remove_email(email_addresses_id):
     del_email= Newsletter.query.filter(Newsletter.id==email_addresses_id).first()
