@@ -29,7 +29,7 @@
     <form method="POST" action="/">
       {{ newsform.csrf_token}}
       {{ newsform.email(size=30) }}
-    <button>Zapisz się</button>
+    <button onclick="closeNewsletterPopup()">Zapisz się</button>
     </form>
   </div>
   <!-- Navbar -->
