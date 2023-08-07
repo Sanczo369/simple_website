@@ -747,74 +747,55 @@ footer p i{
 
 /* Menu */
 nav {
- z-index: 1;
- height: 100px;
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
+ height: 70px;
  padding-left: 80px;
 }
-
 nav img {
-  height: 60px;
-  top: 20px;
-  left: 12px;
+  height: 40px;
+  top: 15px;
 }
-
 nav h1 {
-  font-size: 30px;
-  margin-top: 20px;
-  margin-bottom: 7px;
-  display: block;
-}
-
-.menu ul  {
-  margin-top: -100px;
   font-size: 20px;
-  top:0;
-  right: 70px;
+  margin-top: 7px;
+  margin-bottom: -5px;
+}
+nav p {
+  font-size: 15px;
+}
+.menu ul  {
+display: none;
+right: 0;
+left: 0;
+margin: 0;
+text-align: center;
 }
 .menu ul>li {
- display: inline-block;
- margin-right: 20px;
-
+ display: block;
+ margin: 0;
+ border-bottom: 1px solid #fff;
 }
 .menu ul>li>a {
+text-transform: uppercase;
 text-decoration: none;
 color: white;
 font-size: 20px;
+font-weight: 600;
 line-height: 100px;
 padding: 10px;
 }
 .menu .hamburgerNav.see{
-  margin-top: 0px;
+  margin-top: 70px;
+  display: block;
+  background-color: #000;
+}
+.menu-btn {
+  top:30px;
+
+}
+.activeNav{
+  background-color: rgba(0, 0, 0, 1);
 }
 
-.menu-btn {
-  position: absolute;
-  top:50px;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  transition: all .5s ease-in-out;
-}
-.bar {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  transition: all .5s ease-in-out;
-}
-.bar::before,
-.bar::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  transition: all .5s ease-in-out;
-}
    /* Header  */
 aside {
   right: 50%;
