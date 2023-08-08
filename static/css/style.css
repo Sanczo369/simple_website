@@ -1,13 +1,8 @@
 *{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
 }
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
 .wraper{
   width: 1400px;
   margin: 0 auto;
@@ -25,7 +20,7 @@ html{
   padding: 20px;
   background-color: #000;
   border-top: 1px solid #fff;
-  color: white;
+  color: #fff;
   z-index: 9999;
   text-align: center;
 }
@@ -37,8 +32,8 @@ html{
   top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 1);
-  color: #ffffff;
-  border: 1px solid white;
+  color: #fff;
+  border: 1px solid #fff;
   width: 20px;
   height: 20px;
   margin: 2px;
@@ -69,7 +64,7 @@ nav {
  width: 100%;
  padding-left: 80px;
  background-color: rgba(0, 0, 0, 1);
- color: #ffffff;
+ color: #fff;
  font-family: 'Saira Condensed', sans-serif;
  transition: all 0.5s ease-in-out;
 
@@ -110,13 +105,13 @@ nav h1 {
 }
 .menu ul>li>a {
 text-decoration: none;
-color: white;
+color: #fff;
 font-size: 20px;
 line-height: 100px;
 padding: 10px;
 }
 .menu .hamburgerNav.see{
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .menu-btn {
@@ -198,7 +193,7 @@ header aside blockquote cite { font-style: normal; }
   text-align: center;
   font-family: 'Saira Condensed',
   sans-serif;
-  border-top: 4px solid black;
+  border-top: 4px solid #000;
 }
 
 #about h1 {
@@ -388,9 +383,9 @@ span.text{
 
 #portfolio .project p {
   font-family: 'saira', sans-serif;
-  color: white;
+  color: #fff;
   text-align: center;
-  text-shadow: 0 0 4px black;
+  text-shadow: 0 0 4px #000;
   background-color: rgba(0, 0, 0, .5);
   padding: 0;
   line-height: 40vh;
@@ -428,12 +423,12 @@ span.text{
   font-family: 'Saira Condensed',
   sans-serif;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 30px 0px;
 }
 #team .about {
-  color: white;
+  color: #fff;
   font-family: 'Saira',
   sans-serif;
   font-weight: normal;
@@ -442,7 +437,7 @@ span.text{
 }
 #team .about h3 {
   font-size: 28px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #fff;
   margin-bottom: 50px;
   padding-bottom: 6px;
   text-indent: 40px;
@@ -458,10 +453,10 @@ span.text{
   height: 646px;
 }
 #team .employee:nth-of-type(odd) {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 #team .employee:nth-of-type(even) {
-  background-color: #000000;
+  background-color: #000;
 }
 #team .photo{
   width: 400px;
@@ -499,7 +494,7 @@ span.text{
   padding-right: 20px;
 }
 #team .employee:nth-of-type(odd) .about {
-  color: black;
+  color: #000;
 }
 #team .employee:nth-of-type(even) .about h3 {
   text-indent: 0;
@@ -540,7 +535,7 @@ border-color: #000;
 }
 .slide .opinion .avatar{
 margin-left: 10px;
-border: 2px solid black;
+border: 2px solid #000;
 border-radius:50%;
 }
 
@@ -552,7 +547,7 @@ display: flex;
 justify-content: center;
 }
 .manual-btn{
-  border: 2px solid black;
+  border: 2px solid #000;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -627,7 +622,7 @@ justify-content: center;
   font-family: 'Saira Condensed', sans-serif;
   font-size: 50px;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   width: 100%;
   text-align: center;
   margin-bottom: 80px;
@@ -638,7 +633,7 @@ justify-content: center;
   display: inline-block;
   font-size: 20px;
   width: 100px;
-  color: white;
+  color: #fff;
   vertical-align: top;
 }
 
@@ -666,7 +661,7 @@ justify-content: center;
   display: inline-block;
   font-family: 'Saira Condensed', sans-serif;
   font-size: 20px;
-  color: white;
+  color: #fff;
 }
 
 #contact .contactdetails .menu{
@@ -696,20 +691,20 @@ footer p{
   text-align: right;
   font-family: 'Saira Condensed', sans-serif;
   font-size: 20px;
-  color: #ffffff;
-  background-color: #000000;
+  color: #fff;
+  background-color: #000;
   padding-right: 20px;
 }
 footer p i{
 
   font-size: 20px;
-  color: #ffffff;
+  color: #fff;
   padding-right: 5px;
 }
 
 .to-top{
   background: #fff;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 50%;
   color: #000;
   position: fixed;
@@ -960,285 +955,6 @@ footer .logo-slider .logo{
   width: 33%;
   padding: 5% 10%;
   margin: 0;
-}
-}
-
-
-
-@media screen and (max-width: 480px) {
-  /* Stylizacja dla ekranów o szerokości do 480px (smartfony w orientacji pionowej) */
-.wraper{
-  width: 100%;
-}
-
-/* Newsletter */
-.newsletter-popup {
-  padding: 10px;
-}
-
-/* Menu */
-nav {
- height: 70px;
- padding-left: 80px;
-}
-nav img {
-  height: 40px;
-  top: 15px;
-}
-nav h1 {
-  font-size: 20px;
-  margin-top: 7px;
-  margin-bottom: -5px;
-}
-nav p {
-  font-size: 15px;
-}
-.menu ul  {
-display: none;
-right: 0;
-left: 0;
-margin: 0;
-text-align: center;
-}
-.menu ul>li {
- display: block;
- margin: 0;
- border-bottom: 1px solid #fff;
-}
-.menu ul>li>a {
-text-transform: uppercase;
-text-decoration: none;
-color: white;
-font-size: 20px;
-font-weight: 600;
-line-height: 100px;
-padding: 10px;
-}
-.menu .hamburgerNav.see{
-  margin-top: 70px;
-  display: block;
-  background-color: #000;
-}
-.menu-btn {
-  top:30px;
-
-}
-.activeNav{
-  background-color: rgba(0, 0, 0, 1);
-}
-
-   /* Header  */
-aside {
-  right: 50%;
-  bottom: 50%;
-  transform: translate(50%, 50%);
-  min-width: 18em;
-  font-size: 1.6em;
-}
-
-/* sekcja about */
-#about {
-  border-top: 1px solid black;
-}
-#about .service h2 {
-    padding-top:10px ;
-    top:0;
-    z-index: 1;
-}
-#about .service:hover {
-    transform: rotateY(0deg);
-}
-#about .service .back{
-  transform:rotateY(0deg);
-}
-#about .service  p {
-  padding: 60px;
-  font-size: 20px;
-}
-
-/* sekcja numbers*/
-.numbers{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: block;
-}
-.number{
-  width: 70vmin;
-  height: 60vmin;
-  border-bottom: 2px solid #000;
-  font-size: 20px;
-}
-
-/* sekcja Portfolio */
-#portfolio .projects{
-  grid-template-columns: 100%;
-  grid-template-areas:
-  't1'
-  'l1'
-  'r1'
-  'l2'
-  'r2'
-  'l3'
-  'r3';
-}
-#portfolio .project{
-position: relative;
-}
-#portfolio h1 {
-  font-size: 50px;
-}
-#portfolio .project p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  line-height: 10vh;
-  opacity: 1;
-  font-size: 30px;
-}
-#portfolio .project:hover {
-  background-size: 100%;
-}
-
-/* sekcja team */
-#team {
-  padding: 0;
-}
-#team h1 {
-  font-size: 50px;
-  width: 100%;
-}
-#team .about {
-  padding: 0;
-}
-#team .about h3 {
-  font-size: 25px;
-  padding: 10px;
-  text-indent: 20px;
-  margin-bottom: 0;
-}
-#team .about p {
-  font-size: 18px;
-  width: 100%;
-  padding-top: 0;
-  padding-left: 10px;
-  line-height: 180%;
-}
-#team .employee {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-areas:
-  'left right';
-  height: 350px;
-}
-#team .photo{
-  width: 100%;
-  grid-area: left; 
-  transform: rotate(0deg);
-}
-#team .photo > img{
-  display: block;
-  margin-top: 0;
-  margin-left: 0;
-  transform: rotate(0deg);
-  padding: 5px;
-  border-bottom: 2px solid black;
-}
-#team .about {
-  width: 100%;
-  grid-area: right; 
-}
-#team .employee:nth-of-type(even) .photo {
-  transform: rotate(0deg);
-}
-#team .employee:nth-of-type(even) .photo > img{
-  border-bottom: 2px solid #fff;
-  transform: rotate(0deg);
-}
-
-/*  sekcja opinions */
-.slide .opinion{
-width: 400px;
-font-size: 30px;
-}
-.nav-manual{
-width: 480px;
-}
-.nav-auto{
-width: 480px;
-}
-
-
-/* sekcja contact */
-#contact {
-  padding: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-areas:
-  'head'
-  'left'
-  'right';
-}
-#contact h1 { 
-  grid-area: head;
-  font-size: 50px;
-  margin-bottom: 30px;
-}
-#contact .contactform {
-  grid-area: left;
-  width: 100%; 
-}
-#contact .contactform{
-  display: inline-block;
-  padding: 0 10px;
-}
-#contact label{
-  padding-left: 10px;
-}
-#contact input,
-#contact textarea {
-  width: 70%;
-  margin: 5px 15%;
-  font-family: saira, sans-serif;
-  font-size: 12px;
-  padding: 5px;
-}
-#contact .contactform .submit{
-  margin: 5px 15%;
-}
-#contact .contactdetails { 
-  margin-top: 40px;
-  grid-area: right; 
-}
-#contact .contactdetails .menu li{
-  padding-left: 20px;
-}
-
-/* footer */
-footer .logo-slider{
-  width: 100%;
-  margin: 20px auto;
-  display: block;
-  font-size: 0;
-}
-footer .logo-slider .logo{
-  display: inline-block;
-  width: 50%;
-  padding: 15%;
-  margin: 0;
-}
-
-.to-top{
-  right: 0;
-  bottom: 0;
-  width: 5px;
-  height: 5px;
-  display: block;
-}
-.to-top.active{
-  opacity: 1;
-  pointer-events: auto;
 }
 }
 
@@ -1524,4 +1240,280 @@ footer .logo-slider .logo{
 }
 }
 
+@media screen and (max-width: 480px) {
+  /* Stylizacja dla ekranów o szerokości do 480px (smartfony w orientacji pionowej) */
+.wraper{
+  width: 100%;
+}
+
+/* Newsletter */
+.newsletter-popup {
+  padding: 10px;
+}
+
+/* Menu */
+nav {
+ height: 70px;
+ padding-left: 80px;
+}
+nav img {
+  height: 40px;
+  top: 15px;
+}
+nav h1 {
+  font-size: 20px;
+  margin-top: 7px;
+  margin-bottom: -5px;
+}
+nav p {
+  font-size: 15px;
+}
+.menu ul  {
+display: none;
+right: 0;
+left: 0;
+margin: 0;
+text-align: center;
+}
+.menu ul>li {
+ display: block;
+ margin: 0;
+ border-bottom: 1px solid #fff;
+}
+.menu ul>li>a {
+text-transform: uppercase;
+text-decoration: none;
+color: white;
+font-size: 20px;
+font-weight: 600;
+line-height: 100px;
+padding: 10px;
+}
+.menu .hamburgerNav.see{
+  margin-top: 70px;
+  display: block;
+  background-color: #000;
+}
+.menu-btn {
+  top:30px;
+
+}
+.activeNav{
+  background-color: rgba(0, 0, 0, 1);
+}
+
+   /* Header  */
+aside {
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  min-width: 18em;
+  font-size: 1.6em;
+}
+
+/* sekcja about */
+#about {
+  border-top: 1px solid black;
+}
+#about .service h2 {
+    padding-top:10px ;
+    top:0;
+    z-index: 1;
+}
+#about .service:hover {
+    transform: rotateY(0deg);
+}
+#about .service .back{
+  transform:rotateY(0deg);
+}
+#about .service  p {
+  padding: 60px;
+  font-size: 20px;
+}
+
+/* sekcja numbers*/
+.numbers{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: block;
+}
+.number{
+  width: 70vmin;
+  height: 60vmin;
+  border-bottom: 2px solid #000;
+  font-size: 20px;
+}
+
+/* sekcja Portfolio */
+#portfolio .projects{
+  grid-template-columns: 100%;
+  grid-template-areas:
+  't1'
+  'l1'
+  'r1'
+  'l2'
+  'r2'
+  'l3'
+  'r3';
+}
+#portfolio .project{
+position: relative;
+}
+#portfolio h1 {
+  font-size: 50px;
+}
+#portfolio .project p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 10vh;
+  opacity: 1;
+  font-size: 30px;
+}
+#portfolio .project:hover {
+  background-size: 100%;
+}
+
+/* sekcja team */
+#team {
+  padding: 0;
+}
+#team h1 {
+  font-size: 50px;
+  width: 100%;
+}
+#team .about {
+  padding: 0;
+}
+#team .about h3 {
+  font-size: 25px;
+  padding: 10px;
+  text-indent: 20px;
+  margin-bottom: 0;
+}
+#team .about p {
+  font-size: 18px;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 10px;
+  line-height: 180%;
+}
+#team .employee {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas:
+  'left right';
+  height: 350px;
+}
+#team .photo{
+  width: 100%;
+  grid-area: left; 
+  transform: rotate(0deg);
+}
+#team .photo > img{
+  display: block;
+  margin-top: 0;
+  margin-left: 0;
+  transform: rotate(0deg);
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+#team .about {
+  width: 100%;
+  grid-area: right; 
+}
+#team .employee:nth-of-type(even) .photo {
+  transform: rotate(0deg);
+}
+#team .employee:nth-of-type(even) .photo > img{
+  border-bottom: 2px solid #fff;
+  transform: rotate(0deg);
+}
+
+/*  sekcja opinions */
+.slide .opinion{
+width: 400px;
+font-size: 30px;
+}
+.nav-manual{
+width: 480px;
+}
+.nav-auto{
+width: 480px;
+}
+
+
+/* sekcja contact */
+#contact {
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  'head'
+  'left'
+  'right';
+}
+#contact h1 { 
+  grid-area: head;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+#contact .contactform {
+  grid-area: left;
+  width: 100%; 
+}
+#contact .contactform{
+  display: inline-block;
+  padding: 0 10px;
+}
+#contact label{
+  padding-left: 10px;
+}
+#contact input,
+#contact textarea {
+  width: 70%;
+  margin: 5px 15%;
+  font-family: saira, sans-serif;
+  font-size: 12px;
+  padding: 5px;
+}
+#contact .contactform .submit{
+  margin: 5px 15%;
+}
+#contact .contactdetails { 
+  margin-top: 40px;
+  grid-area: right; 
+}
+#contact .contactdetails .menu li{
+  padding-left: 20px;
+}
+
+/* footer */
+footer .logo-slider{
+  width: 100%;
+  margin: 20px auto;
+  display: block;
+  font-size: 0;
+}
+footer .logo-slider .logo{
+  display: inline-block;
+  width: 50%;
+  padding: 15%;
+  margin: 0;
+}
+
+.to-top{
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  display: block;
+}
+.to-top.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+}
 
