@@ -27,10 +27,10 @@ class NewsletterForm(FlaskForm):
     email = EmailField('Email', validators=[DataRequired()],render_kw={"placeholder": "Twój email", "id":"email"})
     
 class ContactForm(FlaskForm):
-    name = StringField('Name', validators=[DataRequired()])
-    email = EmailField('Email', validators=[DataRequired()])
-    phone = TelField('Phone', validators=[DataRequired()])
-    text = TextAreaField('Text', validators=[DataRequired()])
+    name = StringField('Nazwa', validators=[DataRequired()],render_kw={"placeholder": "Jan Nowak"})
+    email = EmailField('Email', validators=[DataRequired()],render_kw={"placeholder": "jannowak@nowak.pl"})
+    phone = TelField('Numer', validators=[DataRequired()],render_kw={"placeholder": "0123456789"})
+    text = TextAreaField('Tekst', validators=[DataRequired()],render_kw={"placeholder": "text"})
     
 @app.route('/', methods=['GET', 'POST'])
 def index():
