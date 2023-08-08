@@ -732,6 +732,237 @@ footer p i{
   pointer-events: auto;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Stylizacja dla ekranów o szerokości od 769px do 1024px (tablety w orientacji poziomej) */
+.wraper{
+  width: 100%;
+}
+  
+/* Newsletter */
+.newsletter-popup {
+  padding: 20px;
+}
+  
+/* Menu */
+nav {
+  height: 100px;
+}
+nav img {
+  height: 60px;
+}
+nav h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+nav p {
+  font-size: 17px;
+}
+.menu ul  {
+display: none;
+right: 0;
+left: 0;
+margin: 0;
+text-align: center;
+}
+.menu ul>li {
+  display: block;
+  margin: 0;
+  border-bottom: 1px solid #fff;
+}
+.menu ul>li>a {
+text-transform: uppercase;
+font-weight: 600;
+}
+.menu .hamburgerNav.see{
+  margin-top: 100px;
+  display: block;
+  background-color: #000;
+}
+.menu-btn {
+  top:50px;
+}
+.activeNav{
+  background-color: rgba(0, 0, 0, 1);
+}
+  
+/* Header  */
+aside {
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  min-width: 23em;
+  font-size: 2em;
+}
+  
+/* sekcja about */
+#about .service h2 {
+  padding-top:10px ;
+  top:0;
+  z-index: 1;
+}
+#about .service:hover {
+  transform: rotateY(0deg);
+}
+#about .service .back{
+  transform:rotateY(0deg);
+}
+#about .service  p {
+  padding: 60px;
+  font-size: 20px;
+}
+
+/* sekcja Portfolio */
+#portfolio .projects{
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  't1 t1'
+  'r1 l1'
+  'r2 l2'
+  'r3 l3';
+  margin: 0;
+}
+#portfolio h1 {
+  font-size: 50px;
+}
+#portfolio .project{
+  position: relative;
+  height: 20vh;
+}
+#portfolio .project p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 5vh;
+  opacity: 1;
+  font-size: 30px;
+}
+#portfolio .project:hover {
+  background-size: 100%;
+}
+
+/* sekcja numbers*/
+.numbers{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: block;
+}
+.number{
+  width: 50vmin;
+  height: 50vmin;
+  border-bottom: 2px solid #000;
+  font-size: 20px;
+}
+  
+/* sekcja team */
+#team {
+padding-bottom: 0;
+}
+#team h1 {
+  font-size: 50px;
+}
+#team .about {
+  padding: 0;
+}
+#team .about h3 {
+  padding: 15px;
+  text-indent: 20px;
+  margin-bottom: 0;
+}
+#team .about p {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#team .employee {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas:
+  'left right';
+  height: 400px;
+}
+#team .photo{
+  width: 100%;
+  grid-area: left; 
+  transform: rotate(0deg);
+}
+#team .photo > img{
+  display: block;
+  margin-top: 0;
+  margin-left: 0;
+  transform: rotate(0deg);
+  border-bottom: 2px solid black;
+}
+#team .about {
+  width: 100%;
+  grid-area: right; 
+}
+#team .employee:nth-of-type(even) .photo {
+  transform: rotate(0deg);
+}
+#team .employee:nth-of-type(even) .photo > img{
+  border-bottom: 2px solid #fff;
+  transform: rotate(0deg);
+}
+#team .employee:nth-of-type(even) .about h3{
+  margin: 0;
+  text-indent: 20px;
+}
+  
+/*  sekcja opinions */
+.slide .opinion{
+  width: 100%;
+}
+.nav-manual{
+  width: 100%;
+}
+.nav-auto{
+  width: 100%;
+}
+
+/* sekcja contact */
+#contact {
+  grid-template-areas:
+  'head'
+  'left'
+  'right';
+}
+#contact h1 { 
+  grid-area: head;
+  margin-bottom: 30px;
+}
+#contact input,
+#contact textarea {
+  margin: 5px 15%;
+  font-size: 12px;
+  padding: 5px;
+}
+#contact .contactform .submit{
+  margin: 5px 15%;
+}
+#contact .contactdetails .menu li{
+  padding-left: 20px;
+}
+#contact .contactdetails { 
+  margin-top: 40px;
+}
+
+/* footer */
+footer .logo-slider{
+  width: 100%;
+  margin: 20px auto;
+  display: block;
+  font-size: 0;
+}
+footer .logo-slider .logo{
+  display: inline-block;
+  width: 33%;
+  padding: 5% 10%;
+  margin: 0;
+}
+}
+
 
 
 @media screen and (max-width: 480px) {
