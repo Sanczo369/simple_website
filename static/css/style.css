@@ -1010,3 +1010,287 @@ footer .logo-slider .logo{
   pointer-events: auto;
 }
 }
+
+@media screen and (max-width: 768px) {
+  /* Stylizacja dla ekranów o szerokości do 768px (smartfony i małe tablety) */
+  /* Stylizacja dla ekranów o szerokości do 480px (smartfony w orientacji pionowej) */
+.wraper{
+    width: 100%;
+    margin: 0 auto;
+}
+  
+/* Newsletter */
+.newsletter-popup {
+  padding: 15px;
+}
+  
+/* Menu */
+nav {
+  height: 90px;
+  padding-left: 80px;
+}
+nav img {
+  height: 50px;
+  top: 20px;
+}
+nav h1 {
+  font-size: 22px;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+nav p {
+  font-size: 17px;
+}
+.menu ul  {
+display: none;
+right: 0;
+left: 0;
+margin: 0;
+text-align: center;
+}
+.menu ul>li {
+  display: block;
+  margin: 0;
+  border-bottom: 1px solid #fff;
+}
+.menu ul>li>a {
+text-transform: uppercase;
+text-decoration: none;
+color: white;
+font-size: 25px;
+font-weight: 600;
+line-height: 100px;
+padding: 10px;
+}
+.menu .hamburgerNav.see{
+  margin-top: 70px;
+  display: block;
+  background-color: #000;
+}
+.menu-btn {
+  top:45px;
+}
+.activeNav{
+  background-color: rgba(0, 0, 0, 1);
+}
+  
+/* Header  */
+aside {
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  min-width: 22em;
+  font-size: 1.8em;
+}
+  
+/* sekcja about */
+#about {
+  border-top: 2px solid black;
+}
+#about .service h2 {
+  padding-top:10px ;
+  top:0;
+  z-index: 1;
+}
+#about .service:hover {
+  transform: rotateY(0deg);
+}
+#about .service .back{
+  transform:rotateY(0deg);
+}
+#about .service  p {
+  padding: 60px;
+  font-size: 20px;
+}
+
+/* sekcja Portfolio */
+#portfolio .projects{
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+  't1 t1'
+  'r1 l1'
+  'r2 l2'
+  'r3 l3';
+  padding-bottom: 5vh;
+}
+#portfolio .project{
+  position: relative;
+}
+#portfolio h1 {
+  font-size: 50px;
+}
+#portfolio .project p {
+  position: absolute;
+  bottom: -5vh;
+  left: 0;
+  width: 100%;
+  line-height: 10vh;
+  opacity: 1;
+  font-size: 30px;
+}
+#portfolio .project:hover {
+  background-size: 100%;
+}
+
+/* sekcja numbers*/
+.numbers{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: block;
+}
+.number{
+  width: 80vmin;
+  height: 60vmin;
+  border-bottom: 2px solid #000;
+  font-size: 25px;
+}
+  
+/* sekcja team */
+#team {
+  padding: 0;
+}
+#team h1 {
+  font-size: 50px;
+  width: 100%;
+}
+#team .about {
+  padding: 0;
+}
+#team .about h3 {
+  font-size: 25px;
+  padding: 15px;
+  text-indent: 20px;
+  margin-bottom: 0;
+}
+#team .about p {
+  font-size: 18px;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 180%;
+}
+#team .employee {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas:
+  'left right';
+  height: 350px;
+}
+#team .photo{
+  width: 100%;
+  grid-area: left; 
+  transform: rotate(0deg);
+}
+#team .photo > img{
+  display: block;
+  margin-top: 0;
+  margin-left: 0;
+  transform: rotate(0deg);
+  padding: 5px;
+  border-bottom: 2px solid black;
+}
+#team .about {
+  width: 100%;
+  grid-area: right; 
+}
+#team .employee:nth-of-type(even) .photo {
+  transform: rotate(0deg);
+}
+#team .employee:nth-of-type(even) .photo > img{
+  border-bottom: 2px solid #fff;
+  transform: rotate(0deg);
+}
+#team .employee:nth-of-type(even) .about h3{
+  margin: 0;
+  padding: 15px;
+  text-indent: 20px;
+}
+  
+/*  sekcja opinions */
+.slide .opinion{
+  width: 765px;
+  font-size: 30px;
+}
+.nav-manual{
+  width: 765px;
+}
+.nav-auto{
+  width: 765px;
+}
+
+  
+/* sekcja contact */
+#contact {
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  'head'
+  'left'
+  'right';
+}
+#contact h1 { 
+  grid-area: head;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+#contact .contactform {
+  grid-area: left;
+  width: 100%; 
+}
+#contact .contactform{
+  display: inline-block;
+  padding: 0 10px;
+}
+#contact label{
+  padding-left: 10px;
+}
+#contact input,
+#contact textarea {
+  width: 70%;
+  margin: 5px 15%;
+  font-family: saira, sans-serif;
+  font-size: 12px;
+  padding: 5px;
+}
+#contact .contactform .submit{
+  margin: 5px 15%;
+}
+#contact .contactdetails { 
+  margin-top: 40px;
+  grid-area: right; 
+}
+#contact .contactdetails .menu li{
+  padding-left: 20px;
+}
+
+/* footer */
+footer .logo-slider{
+  width: 100%;
+  margin: 20px auto;
+  display: block;
+  font-size: 0;
+}
+footer .logo-slider .logo{
+  display: inline-block;
+  width: 50%;
+  padding: 15%;
+  margin: 0;
+}
+
+.to-top{
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  display: block;
+}
+.to-top.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+}
+
+
