@@ -15,7 +15,7 @@ app.config.from_pyfile('config.cfg')
 # inicjalizacji rozszerzenia
 mail = Mail(app) 
 db = SQLAlchemy(app)
-login_manager = LoginManager(app)
+# login_manager = LoginManager(app)
 
 # konfiguracja logging
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -91,8 +91,8 @@ def remove_email(email_addresses_id):
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
-    form = LoginForm()
-    return render_template('login.html', form=form)
+    formlogin = LoginForm()
+    return render_template('login.html', formlogin=formlogin)
 
 
 @app.route('/logout')
