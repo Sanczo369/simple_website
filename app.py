@@ -1,9 +1,10 @@
 from flask import Flask, render_template, url_for, request, flash, redirect
 from flask_wtf import FlaskForm 
-from wtforms import StringField, EmailField, TextAreaField,TelField
+from wtforms import StringField, EmailField, TextAreaField, TelField, PasswordField, BooleanField
 from flask_mail import Mail, Message
 from wtforms.validators import DataRequired
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
 import logging
 
 
@@ -14,6 +15,7 @@ app.config.from_pyfile('config.cfg')
 # inicjalizacji rozszerzenia
 mail = Mail(app) 
 db = SQLAlchemy(app)
+login_manager = LoginManager(app)
 
 # konfiguracja logging
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -22,6 +24,11 @@ logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s 
 class Newsletter(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100)) 
+    
+class Admin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100)) 
+    email = db.Column(db.String(100))     
 
 class NewsletterForm(FlaskForm):
     email = EmailField('Email', validators=[DataRequired()],render_kw={"placeholder": "Twój email", "id":"email"})
