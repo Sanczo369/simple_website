@@ -46,6 +46,16 @@ class LoginForm(FlaskForm):
     name = StringField('Nazwa')
     password = PasswordField('Hasło')
     remember = BooleanField('Zapamiętaj mnie')
+
+@app.route('/init')
+def init():
+    db.create_all()
+    admin=Admin.query.filter(Admin.name=='admin').first()
+    if admin == None:
+        admin = Admin(id=1, name="admin", password="qwerty")
+        db.session.add(admin)
+        db.session.commit()
+    return '<h1>gotowe</h1>'
     
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -80,6 +90,7 @@ def index():
 
 # wyświetlanie rekordów newslettera
 @app.route('/newsletter')
+@login_required
 def newsletter():
     email_addresses = Newsletter.query.all()
     return render_template('newsletter.html', email_addresses=email_addresses)
