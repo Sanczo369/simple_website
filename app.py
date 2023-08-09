@@ -4,7 +4,7 @@ from wtforms import StringField, EmailField, TextAreaField, TelField, PasswordFi
 from flask_mail import Mail, Message
 from wtforms.validators import DataRequired
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, UserMixin, login_user, login_required, current_user
+from flask_login import LoginManager, UserMixin, login_user, login_required, current_user, logout_user
 import logging
 
 
@@ -15,11 +15,14 @@ app.config.from_pyfile('config.cfg')
 # inicjalizacji rozszerzenia
 mail = Mail(app) 
 db = SQLAlchemy(app)
-# login_manager = LoginManager(app)
+login_manager = LoginManager(app)
 
 # konfiguracja logging
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+@login_manager.user_loader
+def load_user(id):
+    return Admin.query.filter(Admin.id == id).first()
 # klasy
 class Newsletter(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -28,7 +31,7 @@ class Newsletter(db.Model):
 class Admin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100)) 
-    email = db.Column(db.String(100))     
+    password = db.Column(db.String(100))     
 
 class NewsletterForm(FlaskForm):
     email = EmailField('Email', validators=[DataRequired()],render_kw={"placeholder": "Twój email", "id":"email"})
@@ -88,15 +91,16 @@ def remove_email(email_addresses_id):
     db.session.delete(del_email)
     db.session.commit()
     return redirect(url_for('newsletter'))
-
+# logowanie się do bazy newslettera
 @app.route('/login', methods=["GET", "POST"])
 def login():
     formlogin = LoginForm()
     return render_template('login.html', formlogin=formlogin)
 
-
+# wylogowanie
 @app.route('/logout')
 def logout():
+    logout_user()
     return "<h1>You are logged out</h1>"
 
 
