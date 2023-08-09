@@ -38,6 +38,11 @@ class ContactForm(FlaskForm):
     email = EmailField('Email', validators=[DataRequired()],render_kw={"placeholder": "jannowak@nowak.pl"})
     phone = TelField('Numer', validators=[DataRequired()],render_kw={"placeholder": "0123456789"})
     text = TextAreaField('Tekst', validators=[DataRequired()],render_kw={"placeholder": "text"})
+
+class LoginForm(FlaskForm):
+    name = StringField('Nazwa')
+    password = PasswordField('Hasło')
+    remember = BooleanField('Zapamiętaj mnie')
     
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -83,6 +88,12 @@ def remove_email(email_addresses_id):
     db.session.delete(del_email)
     db.session.commit()
     return redirect(url_for('newsletter'))
+
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    form = LoginForm()
+    return render_template('login.html', form=form)
+
 
 @app.route('/logout')
 def logout():
