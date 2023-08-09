@@ -84,5 +84,10 @@ def remove_email(email_addresses_id):
     db.session.commit()
     return redirect(url_for('newsletter'))
 
+@app.route('/logout')
+def logout():
+    return "<h1>You are logged out</h1>"
+
+
 if __name__ == '__main__': 
     app.run()
