@@ -11,6 +11,15 @@
     <title>Login</title> 
 </head>
 <body>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-warning">
+            {{ messages[0] }}
+        </div>
+    {% endif %}
+    {% endwith %}
+
  <!--Grid row--> 
 <h1 class="row d-flex justify-content-center">Zaloguj</h1>
  <div class="row d-flex justify-content-center">
