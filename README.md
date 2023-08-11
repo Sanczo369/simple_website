@@ -8,12 +8,13 @@ Strona internetowa | Responsywna | Stworzona dla firmy budowlanej| Flask
 - Portfolio Projektów
 - Prezentacja zespołów
 - Formularz Kontaktowy
+- Newsletter z bazą adresów email
 
 ## Technologie wykorzystane w projekcie:
 Projekt został zrealizowany przy użyciu następujących technologii:
 - Flask: Framework do tworzenia aplikacji internetowych w języku Python.
 - HTML, CSS i JavaScript: Podstawowe technologie webowe wykorzystane do budowy struktury, stylizacji i interakcji na stronie.
-- Baza danych: SQLAlchemy
+- Baza danych: SQLAlchemy(Newsletter oraz Admin User)
 - Responsive Design: Używanie technik responsywnego designu zapewnia optymalne doświadczenie użytkownika na różnych urządzeniach.
 
 ## JavaScript
