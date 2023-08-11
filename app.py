@@ -20,6 +20,11 @@ login_manager = LoginManager(app)
 # konfiguracja logging
 logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+@login_manager.unauthorized_handler
+def unauthorized():
+    flash("Aby uzyskać dostęp do tej strony, musisz być zalogowany.", "warning")
+    return redirect(url_for("login"))
+
 @login_manager.user_loader
 def load_user(id):
     return Admin.query.filter(Admin.id == id).first()
