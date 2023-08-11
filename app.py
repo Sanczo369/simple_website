@@ -28,7 +28,7 @@ class Newsletter(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(100)) 
     
-class Admin(db.Model):
+class Admin(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100)) 
     password = db.Column(db.String(100))     
@@ -102,10 +102,16 @@ def remove_email(email_addresses_id):
     db.session.delete(del_email)
     db.session.commit()
     return redirect(url_for('newsletter'))
+
 # logowanie się do bazy newslettera
 @app.route('/login', methods=["GET", "POST"])
 def login():
     formlogin = LoginForm()
+    if formlogin.validate_on_submit():
+        user = Admin.query.filter(Admin.name == formlogin.name.data).first()
+        if user != None and user.password == formlogin.password.data:
+            login_user(user, remember=formlogin.remember.data)
+            return '<h1>Jesteś zalogowany</h1>'
     return render_template('login.html', formlogin=formlogin)
 
 # wylogowanie
