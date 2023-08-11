@@ -41,6 +41,11 @@
 
     <h1>Newsletter</h1>
     <div class='container'>
+
+        <div class="d-flex justify-content-end align-items-center">
+            <p class="me-3">Zalogowany jako: {{ current_user.name if current_user.is_authenticated else 'Gość' }}</p>
+            <a href="{{ url_for('logout') }}" class="btn btn-danger" role="button">Wyloguj</a>
+        </div>
         <table class="table">
             <thead>
                 <tr>
