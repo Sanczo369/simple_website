@@ -25,3 +25,9 @@ Projekt został zrealizowany przy użyciu następujących technologii:
 - Kod automatyzuje slider z opiniami zadowolonych klientów
 - Kod pobiera element o klasie .x po kliknięciu zamyka Newsletter
 
+## Organizacja
+- requirements.txt
+- app.py
+- .gitignore
+- static
+- templates
